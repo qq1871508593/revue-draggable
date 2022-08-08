@@ -172,7 +172,7 @@ const useDraggable = (target: MaybeElementRef, options?: Partial<DraggableOption
     }))
     const addClasses = () =>
       Object.keys(get(classes)).forEach((cl) => {
-        get(classes)[cl] ? get(node)?.classList.toggle(cl, true) : get(node)?.classList.toggle(cl, false)
+        get(classes)[cl] ? get(node)?.classList?.toggle(cl, true) : get(node)?.classList?.toggle(cl, false)
       })
     watch(classes, addClasses)
 
